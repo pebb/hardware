@@ -7,7 +7,7 @@ srv:listen(80,function(conn)
     
     -- GET /d5 HTTP/1.1
     -- GET /u5 HTTP/1.1
-    command = string.sub(payload, 6,7) -- the bit after the slash
+    command = string.sub(payload, 5,7) -- the bit after the slash
     print(payload) -- just pass it on the arduino 
     conn:send("OK"); -- and send something back to the pebble to say we got the command
   end) 
